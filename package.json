@@ -1,0 +1,15 @@
+{
+  "name": "img-diff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node-sass --watch src/scss/style.scss css/style.min.css --output-style compressed"
+  },
+  "keywords": [],
+  "author": "Thiago Franchin",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
