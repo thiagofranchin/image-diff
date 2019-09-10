@@ -2,12 +2,12 @@
 
 Template para comparar imagens.
 
-###Requerimentos
+### Requerimentos
 
 - Requer **PHP 7** instalado.
 - Para desenvolvedores requer **Node.js** instalado.
 
-##Modo de uso
+## Modo de uso
 
 Existem 3 pasta:
 - `/before`
