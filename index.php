@@ -29,7 +29,7 @@ $recursive = new RecursiveIteratorIterator($list);
         </div>
       </div>
 
-      <div class="row px-3" id="content-images">
+      <div class="row px-3 pb-5" id="content-images">
       <?php
       foreach($recursive as $obj) {
         if($obj->getFilename() != '.' && $obj->getFilename() != '..') {
@@ -44,9 +44,12 @@ $recursive = new RecursiveIteratorIterator($list);
           <h6 class="text-danger">After</h6>
           <img src="after/<?php echo $obj->getFilename(); ?>" class="img-fluid">
         </div>
-        <div class="col-12 col-md-4 p-1 mb-5">
+        <div class="col-12 col-md-4 p-1">
           <h6 class="text-danger">Diff</h6>
           <img src="diff/<?php echo $obj->getFilename(); ?>" class="img-fluid">
+        </div>
+        <div class="col-12 mb-5">
+          <p class="text-white text-center"><?php echo $obj->getFilename(); ?></p>
         </div>
 
       <?php
