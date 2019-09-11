@@ -44,10 +44,12 @@ $recursive = new RecursiveIteratorIterator($list);
           <h6 class="text-danger">After</h6>
           <img src="after/<?php echo $obj->getFilename(); ?>" class="img-fluid">
         </div>
+
         <div class="col-12 col-md-4 p-1">
           <h6 class="text-danger">Diff</h6>
           <img src="diff/<?php echo $obj->getFilename(); ?>" class="img-fluid">
         </div>
+
         <div class="col-12 mb-5">
           <p class="text-white text-center"><?php echo $obj->getFilename(); ?></p>
         </div>
