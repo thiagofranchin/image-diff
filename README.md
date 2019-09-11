@@ -1,4 +1,4 @@
-# DIFF IMAGES
+# IMAGE DIFF
 
 Template para comparar imagens.
 
