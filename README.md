@@ -1,6 +1,6 @@
 # IMAGE DIFF
 
-Template para comparar imagens.
+Template criado para efetuar testes de visual regression..
 
 ### Requerimentos
 
