@@ -9,7 +9,7 @@ Template criado para efetuar testes de visual regression..
 
 ## Modo de uso
 
-Existem 3 pasta:
+Existem 3 pastas:
 - `/before`
 - `/after`
 - `/diff`
