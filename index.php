@@ -1,7 +1,6 @@
 <?php
-$folder = 'diff';
-$list = new RecursiveDirectoryIterator($folder);
-$recursive = new RecursiveIteratorIterator($list);
+require 'compare.php';
+$recursive = compare();
 ?>
 
 <!DOCTYPE html>
@@ -31,31 +30,48 @@ $recursive = new RecursiveIteratorIterator($list);
 
       <div class="row px-3 pb-5" id="content-images">
       <?php
-      foreach($recursive as $obj) {
-        if($obj->getFilename() != '.' && $obj->getFilename() != '..') {
+      foreach($recursive as $key => $obj) {
       ?>
 
         <div class="col-6 col-md-4 mb-1 p-1">
           <h6 class="text-danger">Before</h6>
-          <img src="before/<?php echo $obj->getFilename(); ?>" class="img-fluid">
+          <img src="<?php  
+            if (file_exists('images/1_before/'.$obj)) {
+                echo "images/1_before/" .$obj;
+            }else{
+              echo 'images/404.png';
+            }
+          ?>" class="img-fluid">
         </div>
 
         <div class="col-6 col-md-4 p-1">
           <h6 class="text-danger">After</h6>
-          <img src="after/<?php echo $obj->getFilename(); ?>" class="img-fluid">
+          <img src="<?php 
+          if (file_exists('images/2_after/'.$obj)) {
+            echo "images/2_after/".$obj;
+          }else{
+            echo "images/404.png";
+          }
+          ?>" class="img-fluid">
         </div>
 
         <div class="col-12 col-md-4 p-1">
           <h6 class="text-danger">Diff</h6>
-          <img src="diff/<?php echo $obj->getFilename(); ?>" class="img-fluid">
+          <img src="<?php
+           if (file_exists('images/3_diff/'.$obj)) {
+            echo "images/3_diff/".$obj;
+          }else{
+            echo "images/404.png";
+          }
+          ?>" class="img-fluid">
         </div>
 
         <div class="col-12 mb-5">
-          <p class="text-white text-center"><?php echo $obj->getFilename(); ?></p>
+          <p class="text-white text-center"><?php echo $obj; ?></p>
         </div>
 
       <?php
-      }}
+      }
       ?>
       </div>
     </div>
