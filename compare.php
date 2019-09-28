@@ -1,37 +1,37 @@
 <?php
 
 function compare(){
-    $before = array();
-    $after = array();
-    $diff = array();
+  $before = array();
+  $after = array();
+  $diff = array();
 
-    foreach(glob('images/2_after/*.*') as $pathA){
-        $pathEx = explode('/', $pathA);
-        array_push($after,$pathEx[2]);
-    }
+  foreach(glob('images/after/*.*') as $pathA){
+    $pathEx = explode('/', $pathA);
+    array_push($after,$pathEx[2]);
+  }
 
-    foreach(glob('images/1_before/*.*') as $pathB){
-        $pathEx = explode('/', $pathB);
-        array_push($before,$pathEx[2]);
-    }
+  foreach(glob('images/before/*.*') as $pathB){
+    $pathEx = explode('/', $pathB);
+    array_push($before,$pathEx[2]);
+  }
 
-    foreach(glob('images/3_diff/*.*') as $pathD){
-        $pathEx = explode('/', $pathD);
-        array_push($diff,$pathEx[2]);
-    }
-    
-    $diffBA = array_diff($before, $after);
-    $diffAB = array_diff($after, $before);
-    
-    $all_cases = array(
-        $diff,
-        $diffAB,
-        $diffBA
-    );
-    
-    $all_cases_final = call_user_func_array('array_merge', $all_cases);
-    
-    return($all_cases_final);
+  foreach(glob('images/diff/*.*') as $pathD){
+    $pathEx = explode('/', $pathD);
+    array_push($diff,$pathEx[2]);
+  }
+
+  $diffBA = array_diff($before, $after);
+  $diffAB = array_diff($after, $before);
+
+  $all_cases = array(
+    $diff,
+    $diffAB,
+    $diffBA
+  );
+
+  $all_cases_final = call_user_func_array('array_merge', $all_cases);
+
+  return($all_cases_final);
 }
 
 ?>
