@@ -20,6 +20,7 @@ A comparação das imagens que serão exibidas segue a seguinte lógica.
 `não` Não existe a imagem na pasta.
 
 As imagens serão exibidas quando:
+
 | Before | After | Diff  |
 | :---:  | :---: | :---: |
 | `sim`  | `sim` | `sim` |
@@ -27,6 +28,7 @@ As imagens serão exibidas quando:
 | `sim`  | `não` | `não` |
 
 Nenhuma das imagens será exibida quando:
+
 | Before | After | Diff  |
 | :---:  | :---: | :---: |
 | `sim`  | `sim` | `não` |
