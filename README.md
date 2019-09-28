@@ -16,8 +16,9 @@ Coloque as imagens correspondentes nas pastas:
 
 A comparação das imagens que serão exibidas segue a seguinte lógica.
 
-`sim` Existe a imagem na pasta.
-`não` Não existe a imagem na pasta.
+`sim`: Existe a imagem na pasta.
+
+`não`: Não existe a imagem na pasta.
 
 As imagens serão exibidas quando:
 
