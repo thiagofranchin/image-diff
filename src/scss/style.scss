@@ -18,16 +18,13 @@ body {
 
 .box {
   min-height: 180px;
-
-  img {
-    border-radius: 5px;
-  }
 }
 
 .name-image {
   margin-bottom: 0;
 }
 
+// No Image
 .no-image {
   background: gray;
   height: calc(100% - 23px);
@@ -60,25 +57,4 @@ body {
     top: 60%;
     transform: translate(-50%,-40%);
   }
-}
-
-// Zoom Lens
-* {box-sizing: border-box;}
-
-.img-zoom-container {
-  position: relative;
-}
-
-.img-zoom-lens {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-}
-
-.img-zoom-result {
-  border: 1px solid #d4d4d4;
-  position: absolute;
-  top: 0;
-  margin-top: 30px;
-  pointer-events: none;
 }

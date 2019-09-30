@@ -16,7 +16,7 @@ $recursive = compare();
 
   </head>
   <body>
-    <div class="container" id="grid">
+    <div class="container-fluid" id="grid">
 
       <div class="row py-3">
         <div class="col-12">
@@ -45,7 +45,7 @@ $recursive = compare();
             <h6 class="text-danger">Before </h6>
             <?php
             if (file_exists('images/before/'.$obj)) {
-              echo '<img src="images/before/' .$obj.'" class="img-fluid" id="before-img-'.$key.'">';
+              echo '<img src="images/before/' .$obj.'" class="img-fluid img-original" id="before-img-'.$key.'">';
             }
             else {
               echo '<div class="no-image">
@@ -54,7 +54,6 @@ $recursive = compare();
                     </div>';
             }
             ?>
-            <div id="before-result-<?php echo $key ?>" class="img-zoom-result"></div>
           </div>
 
           <!-- After -->
@@ -62,7 +61,7 @@ $recursive = compare();
             <h6 class="text-danger">After</h6>
             <?php
             if (file_exists('images/after/'.$obj)) {
-              echo '<img src="images/after/' .$obj.'" class="img-fluid" id="after-img-'.$key.'">';
+              echo '<img src="images/after/' .$obj.'" class="img-fluid img-original" id="after-img-'.$key.'">';
             }
             else {
               echo '<div class="no-image">
@@ -71,7 +70,6 @@ $recursive = compare();
                     </div>';
             }
             ?>
-            <div id="after-result-<?php echo $key ?>" class="img-zoom-result"></div>
           </div>
 
           <!-- Diff -->
@@ -79,7 +77,7 @@ $recursive = compare();
             <h6 class="text-danger">Diff</h6>
             <?php
             if (file_exists('images/diff/'.$obj)) {
-              echo '<img src="images/diff/' .$obj.'" class="img-fluid" id="diff-img-'.$key.'">';
+              echo '<img src="images/diff/' .$obj.'" class="img-fluid img-original" id="diff-img-'.$key.'">';
             }
             else {
               echo '<div class="no-image">
@@ -88,7 +86,6 @@ $recursive = compare();
                     </div>';
             }
             ?>
-            <div id="diff-result-<?php echo $key ?>" class="img-zoom-result"></div>
           </div>
         </div>
         <?php
@@ -102,6 +99,7 @@ $recursive = compare();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+    <script src="javascript/jquery.zoom.min.js"></script>
     <script src="javascript/app.js"></script>
   </body>
 </html>
