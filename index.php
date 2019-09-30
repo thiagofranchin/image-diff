@@ -54,7 +54,7 @@ $recursive = compare();
                     </div>';
             }
             ?>
-            <div id="before-result-<? echo $key ?>" class="img-zoom-result"></div>
+            <div id="before-result-<?php echo $key ?>" class="img-zoom-result"></div>
           </div>
 
           <!-- After -->
@@ -71,7 +71,7 @@ $recursive = compare();
                     </div>';
             }
             ?>
-            <div id="after-result-<? echo $key ?>" class="img-zoom-result"></div>
+            <div id="after-result-<?php echo $key ?>" class="img-zoom-result"></div>
           </div>
 
           <!-- Diff -->
@@ -88,7 +88,7 @@ $recursive = compare();
                     </div>';
             }
             ?>
-            <div id="diff-result-<? echo $key ?>" class="img-zoom-result"></div>
+            <div id="diff-result-<?php echo $key ?>" class="img-zoom-result"></div>
           </div>
         </div>
         <?php
