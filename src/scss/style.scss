@@ -42,39 +42,27 @@
     height: 85%;
   }
 
-  // No Image
-  .no-image {
-    background: gray;
-    height: calc(100% - 23px);
-    width: 100%;
-    border-radius: 10px;
+  span {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 500;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-65%);
 
     @media (max-width: 767.98px) {
-      height: 85%;
+      top: 40%;
     }
+  }
 
-    span {
+  svg.fa-sad-tear {
     color: white;
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 3rem;
     left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%,-65%);
-
-      @media (max-width: 767.98px) {
-        top: 40%;
-      }
-    }
-
-    svg.fa-sad-tear {
-      color: white;
-      font-size: 3rem;
-      left: 50%;
-      position: relative;
-      top: 60%;
-      transform: translate(-50%,-40%);
-    }
+    position: relative;
+    top: 60%;
+    transform: translate(-50%,-40%);
   }
 }
 
