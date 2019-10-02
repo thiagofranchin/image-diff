@@ -1,9 +1,12 @@
 $( document ).ready(function() {
+
+  // Grid
   $('#load-grid').click(function() {
     $('#grid').toggleClass( "container" );
     $('#grid').toggleClass( "container-fluid" );
   });
 
+  // Zoom
   $('img.img-original')
     .wrap('<span style="display:inline-block" class="zoom"></span>')
     .css('display', 'block')
@@ -27,4 +30,22 @@ $( document ).ready(function() {
       $(this).trigger(event);
     })
   }
+
+  // Btn return to top
+  $('.btn-to-top').hide();
+  $(window).scroll(function() {
+    if($(this).scrollTop()>0) {
+      $('.btn-to-top').fadeIn();
+    }
+    else {
+      $('.btn-to-top').fadeOut();
+    }
+  });
+
+  $('.btn-to-top').click(function() {
+    $('html, body').animate({
+      scrollTop: 0
+    });
+  });
+
 });

@@ -10,6 +10,7 @@
   "author": "Thiago Franchin",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "jquery-zoom": "^1.7.21",
     "node-sass": "^4.12.0"
   }
