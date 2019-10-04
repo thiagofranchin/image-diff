@@ -1,69 +1,22 @@
 @import 'partials/colors';
 @import 'partials/typography';
 @import '../../node_modules/bootstrap/scss/bootstrap';
+@import 'partials/menu';
+@import 'partials/accordion';
 
-.bar-title-image {
-  margin-top: 20px;
+.container {
+  @media (min-width: 992px) { transition: all .5s ease; }
+  @media (min-width: 768px) { transition: all .5s ease; }
+  @media (min-width: 576px) { transition: all .5s ease; }
 }
 
-#load-grid {
-  position: fixed;
-  right: 5px;
-  top: 5px;
-  z-index: 1;
+#grid {
+  padding-left: 75px;
+  padding-bottom: 100px;
 }
 
 .title-page {
   text-shadow: 0px 0px 6px $primary;
-}
-
-.box {
-  min-height: 180px;
-
-  h6 {
-    font-size: 1.2rem;
-    margin: 10px 0 3px;
-    text-shadow: 0px 0px 5px $primary;
-  }
-}
-
-.name-image {
-  margin-bottom: 0;
-}
-
-// No Image
-.no-image {
-  background: $light;
-  height: calc(100% - 23px);
-  width: 100%;
-  border-radius: 10px;
-
-  @media (max-width: 767.98px) {
-    height: 85%;
-  }
-
-  span {
-  color: white;
-  font-size: 1.3rem;
-  font-weight: 500;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%,-65%);
-
-    @media (max-width: 767.98px) {
-      top: 40%;
-    }
-  }
-
-  svg.fa-sad-tear {
-    color: white;
-    font-size: 3rem;
-    left: 50%;
-    position: relative;
-    top: 60%;
-    transform: translate(-50%,-40%);
-  }
 }
 
 .btn-to-top {

@@ -25,8 +25,8 @@ As imagens serão exibidas quando:
 | Before | After | Diff  |
 | :---:  | :---: | :---: |
 | `sim`  | `sim` | `sim` |
+| `sim`  | `nao` | `não` |
 | `não`  | `sim` | `não` |
-| `sim`  | `não` | `não` |
 
 Nenhuma das imagens será exibida quando:
 

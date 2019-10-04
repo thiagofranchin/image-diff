@@ -48,4 +48,69 @@ $( document ).ready(function() {
     });
   });
 
+  // Filters
+  $('#filter-all').click(function() {
+    $('#accordionImagesDiff .row-group').each(function(index, element) {
+        $(element).show();
+    })
+  });
+
+  $('#filter-before').click(function() {
+    $('#accordionImagesDiff .row-group').each(function(index, element) {
+        $(element).show();
+        let before = $(element).find('img.img-before').length;
+        let after = $(element).find('img.img-after').length;
+        let diff = $(element).find('img.img-diff').length;
+
+        if(
+            (before == 1 && after == 1 && diff == 1) ||
+            (before == 0 && after == 1 && diff == 0)) {
+              $(element).hide();
+        }
+
+        console.log('before: ' + before)
+        console.log('after: ' + after)
+        console.log('diff: ' + diff)
+    })
+  });
+
+  $('#filter-after').click(function() {
+    $('#accordionImagesDiff .row-group').each(function(index, element) {
+        $(element).show();
+        let before = $(element).find('img.img-before').length;
+        let after = $(element).find('img.img-after').length;
+        let diff = $(element).find('img.img-diff').length;
+
+        if (
+            (before == 1 && after == 1 && diff == 1) ||
+            (before == 1 && after == 0 && diff == 0)) {
+              $(element).hide();
+        }
+    })
+  });
+
+  $('#filter-diff').click(function() {
+    $('#accordionImagesDiff .row-group').each(function(index, element) {
+        $(element).show();
+        let before = $(element).find('img.img-before').length;
+        let after = $(element).find('img.img-after').length;
+        let diff = $(element).find('img.img-diff').length;
+
+        if (
+            (before == 1 && after == 0 && diff == 0) ||
+            (before == 0 && after == 1 && diff == 0)) {
+              $(element).hide();
+        }
+    })
+  });
+
+  // Accordion
+  $('#accordion-collapse-show').click(function() {
+    $('.row-group button').removeClass('collapsed');
+    $('.collapse').addClass('show');
+  })
+  $('#accordion-collapse-hide').click(function() {
+    $('.row-group button').addClass('collapsed');
+    $('.collapse').removeClass('show');
+  })
 });

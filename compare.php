@@ -1,5 +1,4 @@
 <?php
-
 function compare(){
   $before = array();
   $after = array();
@@ -31,7 +30,8 @@ function compare(){
 
   $all_cases_final = call_user_func_array('array_merge', $all_cases);
 
+  sort($all_cases_final);
+
   return($all_cases_final);
 }
-
 ?>

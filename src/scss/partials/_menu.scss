@@ -1,0 +1,42 @@
+.menu {
+  background: #212B2F;
+  height: 100vh;
+  position: fixed;
+  width: 60px;
+
+  ul {
+    padding-inline-start: 0;
+
+    li {
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      padding: .75rem 5px;
+      transition: all .5s ease;
+
+      &:hover {
+        background: $primary;
+
+        svg {
+          color: $dark;
+        }
+      }
+
+      &.list-group-item:last-child,
+      &.list-group-item:first-child {
+        border-radius: 0;
+      }
+
+      svg {
+        color: $primary;
+        display: block;
+        filter:drop-shadow(0 0 5px $primary);
+        margin: 0 auto;
+
+        &.fa-arrows-alt-h {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

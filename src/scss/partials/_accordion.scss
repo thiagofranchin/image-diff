@@ -1,0 +1,79 @@
+#accordionImagesDiff {
+  .bar-title-image {
+    margin-top: 20px;
+    border-bottom: none;
+    border-left: 5px solid $primary;
+    border-radius: 25px 25px 0 0;
+    border-right: 5px solid $primary;
+    border-top-style: dotted;
+    box-shadow: 0px 0px 0px #1d89e4;
+    transition: border-radius box-shadow .8s ease;
+
+    &.collapsed {
+      border-radius: 25px;
+      border-bottom: 1px dotted $light;
+    }
+
+    &:hover {
+      background-color: transparent;
+      box-shadow: 0px 3px 10px #1d89e4, inset 0px -3px 10px #1d89e4;
+
+      &.collapsed {
+        border-bottom: 1px dotted $primary;
+        border-top: 1px dotted $primary;
+        box-shadow: 0px 0px 10px #1d89e4, inset 0px 0px 10px #1d89e4;
+      }
+    }
+  }
+
+  .box {
+    min-height: 180px;
+
+    h6 {
+      font-size: 1.2rem;
+      margin: 10px 0 3px;
+      text-shadow: 0px 0px 5px $primary;
+    }
+  }
+
+  .name-image {
+    margin-bottom: 0;
+  }
+
+  // No Image
+  .no-image {
+    background: $light;
+    height: calc(100% - 23px);
+    width: 100%;
+    border-radius: 10px;
+
+    @media (max-width: 767.98px) {
+      height: 85%;
+    }
+
+    span {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-65%);
+
+      @media (max-width: 767.98px) {
+        top: 40%;
+      }
+    }
+
+    svg.fa-sad-tear {
+      color: white;
+      font-size: 3rem;
+      left: 50%;
+      position: relative;
+      top: 60%;
+      transform: translate(-50%,-40%);
+    }
+  }
+
+  .crosshair {cursor: crosshair;}
+}
