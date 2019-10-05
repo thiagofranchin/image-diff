@@ -15,7 +15,10 @@
     <div class="container-fluid" id="grid">
       <div class="row py-3">
         <div class="col-12">
-          <h1 class="text-primary text-center mb-5 mt-2 title-page">DIFF IMAGES</h1>
+          <h1 class="text-primary text-center mb-2 mt-2 title-page">DIFF IMAGES</h1>
+        </div>
+        <div class="col-12">
+          <p class="date"></p>
         </div>
       </div>
 
@@ -32,6 +35,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
     <script src="javascript/jquery.zoom.min.js"></script>
+    <script src="javascript/moment.js"></script>
     <script src="javascript/app.js"></script>
   </body>
 </html>
