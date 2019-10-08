@@ -6,7 +6,7 @@
     border-radius: 25px 25px 0 0;
     border-right: 5px solid $primary;
     border-top-style: dotted;
-    box-shadow: 0px 0px 0px #1d89e4;
+    box-shadow: 0px 0px 0px $primary;
     transition: border-radius box-shadow .8s ease;
 
     &.collapsed {
@@ -16,12 +16,12 @@
 
     &:hover {
       background-color: transparent;
-      box-shadow: 0px 3px 10px #1d89e4, inset 0px -3px 10px #1d89e4;
+      box-shadow: 0px 3px 10px $primary, inset 0px -3px 10px $primary;
 
       &.collapsed {
         border-bottom: 1px dotted $primary;
         border-top: 1px dotted $primary;
-        box-shadow: 0px 0px 10px #1d89e4, inset 0px 0px 10px #1d89e4;
+        box-shadow: 0px 0px 10px $primary, inset 0px 0px 10px $primary;
       }
     }
   }
@@ -74,5 +74,29 @@
     }
   }
 
-  .crosshair {cursor: crosshair;}
+  .crosshair { cursor: crosshair; }
+
+  .report {
+    background: lighten($darkness, 6%);
+    border-radius: 0px 75px 5px 15px;
+    border: 1px solid $primary;
+    box-shadow: 8px 6px 2px $primary, inset 0px -3px 3px $primary, inset 5px 0px 0px $primary;
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 15px 30px 15px 15px;
+    @media (max-width: 991.98px) {
+      font-size: 1rem;
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .btn-outline-success {
+    &:hover {
+      background: #037773;
+      border: 1px solid transparent;
+    }
+  }
 }

@@ -59,6 +59,11 @@
         }
         ?>
       </div>
+
+        <div class="col-12 pr-1">
+          <button class="btn btn-outline-success d-block ml-auto"><i class="fas fa-check-circle"></i> Approved</button>
+        </div>
+
     </div>
   </div>
   <?php

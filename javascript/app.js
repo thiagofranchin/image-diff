@@ -113,4 +113,7 @@ $( document ).ready(function() {
   // Date
   let nowDate = moment().format('dddd[, ] DD MMMM YYYY');
   $('.date').append(nowDate)
+
+
+
 });
