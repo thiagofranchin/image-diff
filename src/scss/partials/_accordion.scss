@@ -9,9 +9,18 @@
     box-shadow: 0px 0px 0px $primary;
     transition: border-radius box-shadow .8s ease;
 
+    svg {
+      transform: rotate(0deg);
+      transition: transform .5s ease;
+    }
+
     &.collapsed {
       border-radius: 25px;
       border-bottom: 1px dotted $light;
+
+      svg {
+        transform: rotate(90deg);
+      }
     }
 
     &:hover {
@@ -42,16 +51,16 @@
 
   // No Image
   .no-image {
-    background: $light;
-    height: calc(100% - 23px);
+    background: $darkness;
+    height: calc(100% - 47px);
     width: 100%;
 
     @media (max-width: 767.98px) {
-      height: 85%;
+      height: 77%;
     }
 
     span {
-    color: white;
+    color: $light;
     font-size: 1.3rem;
     font-weight: 500;
     left: 50%;
@@ -64,8 +73,8 @@
       }
     }
 
-    svg.fa-sad-tear {
-      color: white;
+    svg.fa-image {
+      color: $light;
       font-size: 3rem;
       left: 50%;
       position: relative;
@@ -80,7 +89,7 @@
     background: lighten($darkness, 6%);
     border-radius: 0px 75px 5px 15px;
     border: 1px solid $primary;
-    box-shadow: 8px 6px 2px $primary, inset 0px -3px 3px $primary, inset 5px 0px 0px $primary;
+    box-shadow: 6px 6px 0px $primary, inset 0px -3px 0px $primary, inset 5px 0px 0px $primary;
     font-size: 1.1rem;
     margin: 0;
     padding: 15px 30px 15px 15px;
@@ -97,6 +106,27 @@
     &:hover {
       background: #037773;
       border: 1px solid transparent;
+    }
+  }
+
+  .approved {
+    background: $success;
+    border-color: darken($success, 10%);
+
+    &:hover {
+      background: darken($success, 10%);
+      border-color: $success;
+      box-shadow: 0px 3px 10px $success, inset 0px -3px 10px $success;
+
+      &.collapsed {
+        border-bottom: 1px dotted $success;
+        border-top: 1px dotted $success;
+        box-shadow: 0px 0px 10px $success, inset 0px 0px 10px $success;
+      }
+    }
+
+    p {
+      color: white !important;
     }
   }
 }

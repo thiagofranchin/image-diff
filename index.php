@@ -7,23 +7,22 @@
     <link rel="stylesheet" href="css/style.min.css">
     <!--[if IE]><link rel="shortcut icon" href="images/favicon.ico"><![endif]-->
     <link rel="icon" href="images/favicon.png">
-    <title>Diff Img</title>
+    <title>DIFF IMAGES</title>
   </head>
   <body>
     <?php require 'menu.php'; ?>
 
-    <div class="container-fluid" id="grid">
-      <div class="row py-3">
-        <div class="col-12">
-          <h1 class="text-primary text-center mb-2 mt-2 title-page">DIFF IMAGES</h1>
-        </div>
-        <div class="col-12">
-          <p class="date"></p>
-        </div>
+    <div class="row py-1 bar-top">
+      <div class="col-md-6">
+        <h1 class="display-4 text-primary text-center mb-2 mt-2 title-page">DIFF IMAGES</h1>
       </div>
+      <div class="col-md-6">
+        <p class="date text-center"></p>
+      </div>
+    </div>
 
+    <div class="container-fluid" id="grid">
       <?php require 'accordion.php'; ?>
-
     </div>
 
     <div class="btn-to-top text-white">

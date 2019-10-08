@@ -19,21 +19,50 @@
   text-shadow: 0px 0px 6px $primary;
 }
 
-.btn-to-top {
+.bar-top {
+  background: $darkness;
+  margin-left: 60px;
+  max-height: 120px;
+  overflow: hidden;
   position: fixed;
-  right: 20px;
+  width: calc(100% - 60px);
+  z-index: 1;
+
+  .date {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  @media (max-width: 991.98px) {
+    h1 {
+      font-size: 2.7rem;
+    }
+  }
+}
+
+.accordion {
+  padding-top: 100px;
+
+  @media (max-width: 767.98px) {
+    padding-top: 140px;
+  }
+}
+
+.btn-to-top {
   bottom: 10px;
   cursor: pointer;
+  position: fixed;
+  right: 20px;
 
   .fa-angle-up {
-    font-size: 3rem;
     color: $primary;
+    font-size: 3rem;
   }
 }
 
 .date {
   color: $primary;
   font-size: 1.3rem;
-  text-align: center;
   text-shadow: 0px 0px 6px $primary;
 }

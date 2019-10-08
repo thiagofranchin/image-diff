@@ -1,12 +1,13 @@
-<div class="accordion px-3 pb-5" id="accordionImagesDiff">
+<div class="accordion pb-5" id="accordionImagesDiff">
   <?php
   require 'compare.php';
   $recursive = compare();
   foreach($recursive as $key => $obj) {
   ?>
-  <div class="row-group">
+  <div class="row-group px-3">
     <div class="row">
-      <button class="col-12 py-2 btn-outline-light btn text-left bar-title-image" type="button" data-toggle="collapse" data-target="#collapse<?php echo $key; ?>" aria-expanded="true" aria-controls="collapse<?php echo $key; ?>">
+      <button id="approved-<?php echo $key; ?>" class="col-12 py-2 btn-outline-light btn text-left bar-title-image" type="button"
+      data-toggle="collapse" data-target="#collapse<?php echo $key; ?>" aria-expanded="true" aria-controls="collapse<?php echo $key; ?>">
         <p class="text-primary name-image d-flex justify-content-between"><?php echo $obj; ?> <i class="fas fa-angle-down mt-1"></i></p>
       </button>
     </div>
@@ -22,7 +23,7 @@
         else {
           echo '<div class="no-image">
                   <span>No image...</span>
-                  <i class="far fa-sad-tear"></i>
+                  <i class="far fa-image"></i>
                 </div>';
         }
         ?>
@@ -38,7 +39,7 @@
         else {
           echo '<div class="no-image">
                   <span>No image...</span>
-                  <i class="far fa-sad-tear"></i>
+                  <i class="far fa-image"></i>
                 </div>';
         }
         ?>
@@ -54,15 +55,15 @@
         else {
           echo '<div class="no-image">
                   <span>No image...</span>
-                  <i class="far fa-sad-tear"></i>
+                  <i class="far fa-image"></i>
                 </div>';
         }
         ?>
       </div>
 
-        <div class="col-12 pr-1">
-          <button class="btn btn-outline-success d-block ml-auto"><i class="fas fa-check-circle"></i> Approved</button>
-        </div>
+      <div class="col-12 pr-1">
+        <button class="btn btn-outline-success d-block ml-auto btn-approved" approved="<?php echo $key; ?>"><i class="fas fa-check-circle"></i> Approved</button>
+      </div>
 
     </div>
   </div>

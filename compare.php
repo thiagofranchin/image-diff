@@ -37,12 +37,10 @@ function compare(){
   // Total of images without difference
   $noDifference = $totalImages - count($all_cases);
 
-  echo  '<div class="row">' .
-          '<div class="report">' .
-            '<div class="text-primary">Difference: <span>'. number_format((count($diff) / $totalImages) * 100, 2, '.', '') . '%</span></div>' .
-            '<div class="text-primary">No difference: <span>' . number_format(($noDifference / $totalImages) * 100, 2, '.', '') . '%</span></div>' .
-            '<div class="text-primary">No comparison: <span>' . number_format(($noComparison / $totalImages) * 100, 2, '.', '') . '%</span></div>' .
-          '</div>' .
+  echo  '<div class="row report">' .
+          '<div class="col-sm-4 text-sm-center text-primary">Difference: <span>'. number_format((count($diff) / $totalImages) * 100, 2, '.', '') . '%</span></div>' .
+          '<div class="col-sm-4 text-sm-center text-primary">No difference: <span>' . number_format(($noDifference / $totalImages) * 100, 2, '.', '') . '%</span></div>' .
+          '<div class="col-sm-4 text-sm-center text-primary">No comparison: <span>' . number_format(($noComparison / $totalImages) * 100, 2, '.', '') . '%</span></div>' .
         '</div>';
 
   $all_cases_final = call_user_func_array('array_merge', $all_cases);
