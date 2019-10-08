@@ -35,7 +35,7 @@ function compare(){
   $totalImages = count(array_unique(array_merge($before, $after)));
 
   // Total of images without difference
-  $noDifference = $totalImages - count($all_cases);
+  $noDifference = $totalImages - (count($diff) + count($diffAB) + count($diffBA));
 
   echo  '<div class="row report">' .
           '<div class="col-sm-4 text-sm-center text-primary">Difference: <span>'. number_format((count($diff) / $totalImages) * 100, 2, '.', '') . '%</span></div>' .
