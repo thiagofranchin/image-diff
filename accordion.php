@@ -62,7 +62,9 @@
       </div>
 
       <div class="col-12 pr-1">
-        <button class="btn btn-outline-success d-block ml-auto btn-approved" approved="<?php echo $key; ?>"><i class="fas fa-check-circle"></i> Approved</button>
+        <button class="btn btn-outline-success d-block ml-auto btn-approved" approved="<?php echo $key; ?>"
+        data-toggle="collapse" data-target="#collapse<?php echo $key; ?>" aria-expanded="true" aria-controls="collapse<?php echo $key; ?>"
+        ><i class="fas fa-check-circle"></i> Approved</button>
       </div>
 
     </div>
