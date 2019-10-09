@@ -66,3 +66,14 @@
   font-size: 1.3rem;
   text-shadow: 0px 0px 6px $primary;
 }
+
+// Mouse Effect
+.trail {
+  position: absolute;
+  height: 3px;
+  width: 3px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px $primary;
+  background: $primary;
+  pointer-events: none;
+}
