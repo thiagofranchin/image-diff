@@ -1,4 +1,8 @@
-#accordionImagesDiff {
+.accordion {
+  @media (max-width: 767.98px) {
+    padding-top: 140px;
+  }
+
   .bar-title-image {
     margin-top: 20px;
     border-bottom: none;
@@ -84,23 +88,6 @@
   }
 
   .crosshair { cursor: crosshair; }
-
-  .report {
-    background: lighten($darkness, 6%);
-    border-radius: 0px 75px 5px 15px;
-    border: 1px solid $primary;
-    box-shadow: 6px 6px 0px $primary, inset 0px -3px 0px $primary, inset 5px 0px 0px $primary;
-    font-size: 1.1rem;
-    margin: 0;
-    padding: 15px 30px 15px 15px;
-    @media (max-width: 991.98px) {
-      font-size: 1rem;
-    }
-
-    span {
-      font-weight: 600;
-    }
-  }
 
   .btn-outline-success {
     &:hover {

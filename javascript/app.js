@@ -49,13 +49,13 @@ $( document ).ready(function() {
 
   // Filters
   $('#filter-all').click(function() {
-    $('#accordionImagesDiff .row-group').each(function(index, element) {
+    $('.accordion .row-group').each(function(index, element) {
         $(element).show()
     })
   })
 
   $('#filter-before').click(function() {
-    $('#accordionImagesDiff .row-group').each(function(index, element) {
+    $('.accordion .row-group').each(function(index, element) {
       $(element).show()
       let before = $(element).find('img.img-before').length
       let after = $(element).find('img.img-after').length
@@ -70,7 +70,7 @@ $( document ).ready(function() {
   })
 
   $('#filter-after').click(function() {
-    $('#accordionImagesDiff .row-group').each(function(index, element) {
+    $('.accordion .row-group').each(function(index, element) {
       $(element).show()
       let before = $(element).find('img.img-before').length
       let after = $(element).find('img.img-after').length
@@ -85,7 +85,7 @@ $( document ).ready(function() {
   })
 
   $('#filter-diff').click(function() {
-    $('#accordionImagesDiff .row-group').each(function(index, element) {
+    $('.accordion .row-group').each(function(index, element) {
       $(element).show()
       let before = $(element).find('img.img-before').length
       let after = $(element).find('img.img-after').length
