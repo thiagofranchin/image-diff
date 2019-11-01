@@ -22,7 +22,10 @@
     </div>
 
     <div class="container-fluid" id="grid">
-      <?php require 'accordion.php'; ?>
+      <input type="text" class="search" id="inputSearch" placeholder="Search...">
+      <div id="images-result">
+        <?php require 'accordion.php'; ?>
+      </div>
     </div>
 
     <div class="btn-to-top text-white">

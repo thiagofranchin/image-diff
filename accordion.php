@@ -3,7 +3,7 @@
   $recursive = compare();
   foreach($recursive as $key => $obj) {
     ?>
-  <div class="accordion" id="accordionImagesDiff<?php echo $key; ?>">
+  <div class="accordion" id="accordionImagesDiff<?php echo $key; ?>" filename="<?php echo $obj; ?>">
     <div class="row-group px-3">
       <div class="row">
         <button id="approved-<?php echo $key; ?>" class="col-12 py-2 btn-outline-light btn text-left bar-title-image" type="button"

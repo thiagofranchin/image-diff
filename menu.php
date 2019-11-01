@@ -1,5 +1,8 @@
 <div class="menu d-flex justify-content-between flex-column">
   <ul class="list-group">
+    <li class="list-group-item" id="search">
+      <i class="fas fa-search"></i>
+    </li>
     <li class="list-group-item" id="load-grid">
       <i class="fas fa-arrows-alt-h"></i>
     </li>

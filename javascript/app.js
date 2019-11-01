@@ -1,10 +1,12 @@
 $( document ).ready(function() {
+  ///////////////////////////
   // Grid
   $('#load-grid').click(function() {
     $('#grid').toggleClass( "container" )
     $('#grid').toggleClass( "container-fluid" )
   })
 
+  ///////////////////////////
   // Zoom
   $('img.img-original')
     .wrap('<span style="display:inline-block" class="zoom"></span>')
@@ -16,7 +18,6 @@ $( document ).ready(function() {
   .on('mouseenter', triggerSiblingsZoom)
   .on('mouseleave', triggerSiblingsZoom)
   .on('mousemove', triggerSiblingsZoom)
-
 
   function triggerSiblingsZoom(e) {
     let $target = $(e.currentTarget)
@@ -30,6 +31,7 @@ $( document ).ready(function() {
     })
   }
 
+  ///////////////////////////
   // Btn return to top
   $('.btn-to-top').hide()
   $(window).scroll(function() {
@@ -47,6 +49,7 @@ $( document ).ready(function() {
     })
   })
 
+  ///////////////////////////
   // Filters
   $('#filter-all').click(function() {
     $('.accordion .row-group').each(function(index, element) {
@@ -99,6 +102,7 @@ $( document ).ready(function() {
     })
   })
 
+  ///////////////////////////
   // Accordion
   $('#accordion-collapse-show').click(function() {
     $('.row-group button').removeClass('collapsed')
@@ -109,10 +113,12 @@ $( document ).ready(function() {
     $('.collapse').removeClass('show')
   })
 
+  ///////////////////////////
   // Date
   let nowDate = moment().format('dddd[, ] DD MMMM YYYY')
   $('.date').append(nowDate)
 
+  ///////////////////////////
   // Approved
   $('button.btn-approved').click(function() {
     let approvedCurrent = $(this).attr('approved')
@@ -122,6 +128,7 @@ $( document ).ready(function() {
     $('button#approved-' + approvedCurrent).toggleClass('approved')
   })
 
+  ///////////////////////////
   // Print
   $('#print').click(function() {
     $('html').animate({
@@ -129,40 +136,67 @@ $( document ).ready(function() {
     }, function() {
       window.print();
     })
+  })
 
+  ///////////////////////////
+  // Search
+  $('#search').click(function() {
+    let test;
+    $('.search').toggleClass('showSearch')
+    $( ".showSearch" ).focus();
+  })
+
+  $('#inputSearch').keyup(function(){
+    let input, filter, imagesResult, accordion, p, i, txtValue;
+    filter = $('#inputSearch').val().toUpperCase();
+    accordion = $("#images-result .accordion");
+
+    for (i = 0; i < accordion.length; i++) {
+      // p = $(accordion[i] + ' p:eq(0)').prop("tagName")
+
+      p = accordion[i].getElementsByTagName("p")[0]
+      txtValue = p.textContent || p.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        accordion[i].style.display = "";
+      } else {
+        accordion[i].style.display = "none";
+      }
+    }
   })
 })
 
+///////////////////////////
 // dots is an array of Dot objects,
 // mouse is an object used to track the X and Y position
 // of the mouse, set with a mousemove event listener below
-var dots = [],
+let dots = [],
 mouse = {
   x: 0,
   y: 0
 };
 
 // The Dot object used to scaffold the dots
-var Dot = function() {
+let Dot = function() {
   this.x = 0;
   this.y = 0;
   this.node = (function(){
-    var n = document.createElement("div");
+    let n = document.createElement("div");
     n.className = "trail";
     document.body.appendChild(n);
     return n;
   }());
 };
+
 // The Dot.prototype.draw() method sets the position of
- // the object's <div> node
+// the object's <div> node
 Dot.prototype.draw = function() {
   this.node.style.left = this.x + "px";
   this.node.style.top = this.y + "px";
 };
 
 // Creates the Dot objects, populates the dots array
-for (var i = 0; i < 20; i++) {
-  var d = new Dot();
+for (let i = 0; i < 20; i++) {
+  let d = new Dot();
   dots.push(d);
 }
 
@@ -170,19 +204,18 @@ for (var i = 0; i < 20; i++) {
 function draw() {
   // Make sure the mouse position is set everytime
   // draw() is called.
-  var x = mouse.x,
+  let x = mouse.x,
   y = mouse.y;
 
   // This loop is where all the 90s magic happens
   dots.forEach(function(dot, index, dots) {
-    var nextDot = dots[index + 1] || dots[0];
+    let nextDot = dots[index + 1] || dots[0];
 
     dot.x = x;
     dot.y = y;
     dot.draw();
     x += (nextDot.x - dot.x) * .05;
     y += (nextDot.y - dot.y) * .05;
-
   });
 }
 
@@ -193,7 +226,7 @@ addEventListener("mousemove", function(event) {
 });
 
 // animate() calls draw() then recursively calls itself
- // everytime the screen repaints via requestAnimationFrame().
+// everytime the screen repaints via requestAnimationFrame().
 function animate() {
   draw();
   requestAnimationFrame(animate);
